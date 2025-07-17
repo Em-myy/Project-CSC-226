@@ -1,0 +1,80 @@
+# Build results
+[Bb]in/
+[Oo]bj/
+*.exe
+*.dll
+*.lib
+*.app
+*.pdb
+*.ipdb
+*.iobj
+*.cache
+*.suo
+*.sdf
+*.opensdf
+*.VC.db
+*.idb
+*.tlog
+*.log
+*.lastbuildstate
+*.class
+
+# Visual Studio specific
+.vs/
+.vscode/
+*.user
+*.userosscache
+*.sln.docstates
+
+# Compiled source
+*.com
+*.out
+*.o
+*.obj
+
+# Precompiled Headers
+*.pch
+*.gch
+
+# Packages
+packages/
+*.nupkg
+*.snupkg
+
+# Others
+*.tmp
+*.bak
+*.swp
+*~
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# ReSharper
+_ReSharper*/
+*.DotSettings.user
+
+# JetBrains Rider
+.idea/
+
+# Test result files
+*.trx
+*.coverage
+*.coveragexml
+
+# Crash reports
+crashlog.txt
+
+# Ignore by name
+*.vsidx
+*.VC.db-wal
+*.VC.db-shm
+
+# MacOS or Linux (optional if you're working cross-platform)
+.DS_Store
+Thumbs.db
+
+
