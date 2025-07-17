@@ -1,11 +1,4 @@
-﻿<HTML>
-<HEAD>
-<META NAME="GENERATOR" Content="Microsoft Visual Studio">
-<TITLE></TITLE>
-</HEAD>
-<BODY>
-    /*
-    #include <iostream>
+#include <iostream>
         // For input and output
         #include <vector>
             // To use vectors (dynamic arrays)
@@ -307,6 +300,3 @@
                         cout << "\nThanks for using the BRT Bus Route Finder!\n";
                         return 0;
                         }
-                        */
-</BODY>
-</HTML>
