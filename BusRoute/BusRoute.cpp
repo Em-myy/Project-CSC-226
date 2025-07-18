@@ -4,7 +4,7 @@
 #include <map> // This is a library that allow us to store the locations in a manner that it will be a key value pair.
 using namespace std;
 
-//The first class, this class is the base class in which we will use to define our rotes.
+//The first class, this class is the base class in which we will use to define our routes.
 class RouteInfo {
 	private:
         // This initialize an array named path and we set it as a private property so only the class RouteInfo can access it.
