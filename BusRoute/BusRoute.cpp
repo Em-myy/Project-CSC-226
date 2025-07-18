@@ -13,10 +13,10 @@ class RouteInfo {
         // This also initialize the maximum and minimum cost and set it that only the RouteInfo can access it.
 		int minCost, maxCost; 
 	public:
-        // This also set a constructor but this will run when we create an object hat does not have any arguement
+        // This also set a constructor but this will run when we create an object that does not have any arguement
 		RouteInfo() : minCost(-1), maxCost(-1) {};
 
-        //This set a constructor for the RouteInfo class so that when any object with arguements is created from thr RouteInfo class this constructor will run. 
+        //This set a constructor for the RouteInfo class so that when any object with arguements is created from the RouteInfo class this constructor will run. 
 		RouteInfo(vector<string> p, int minC, int maxC) : path(move(p)), minCost(minC), maxCost(maxC) {}; 
 
         //This is a function that just helps to show our minimum and maximum scores. This won't return any value.
@@ -44,12 +44,12 @@ class RouteManager {
 	private:
 		map<pair<string, string>, RouteInfo> routeMap;
 
-        //This is to make sure that a, b is the same thing as b, a so like ikeja, CMS is the same as CMS, ikeja
+        //This is to make sure that a, b is the same thing as b, a. so like ikeja, CMS is the same as CMS, ikeja
 		pair<string, string> makeKey(const string& a, const string& b) const {
 			return (a < b) ? make_pair(a, b) : make_pair(b, a);
 		};
 	public:
-        /*This function too won't return anything but it will be able to use he map that we declare as private above since it is also inside the same class
+        /*This function too won't return anything but it will be able to use the map that we declare as private above since it is also inside the same class
 		The way it works is that we make the locations key and the value is the route with the minimum and maximum prices.*/
 		void initializeRoutes() {
 			//Routes For Ikeja.
@@ -178,8 +178,8 @@ class BusRouteFinder {
 					std::cout << "You are already at your location" << endl;
 				}
 				else {
-					/*Here we are calling both the RouteInfo class and the RouteManager class and e are now using that 
-					getRoute function that we use to search for the value from the start and end locations the user inputted*/
+					/*Here we are calling both the RouteInfo class and the RouteManager class and we are now using that 
+					getRoute function that we declared to search for the value from the start and end locations the user inputted*/
 					RouteInfo route = routeManager.getRoute(start, end);
 					if (route.isValid()) {
 						route.display();
@@ -205,7 +205,7 @@ class BusRouteFinder {
 		};
 
 		/*This checks if the number the user inputted is greater or lesser than the numbers that we can compare
-		so essentially if we are shoing 1 to 5 and the user picks 8, this is the function that will check it and it will return 
+		so essentially if we are showing 1 to 5 and the user picks 8, this is the function that will check it and it will return 
 		either true or false.*/
 		bool isValidChoice(int choice) const {
 			return choice >= 1 && choice <= (int)locations.size();
