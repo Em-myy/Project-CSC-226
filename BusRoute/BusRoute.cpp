@@ -147,26 +147,35 @@ class BusRouteFinder {
 			std::cout << "Please enter your name: " << endl;
 			getline(cin, username);
 
-			std::cout << "Hello " << username << "!. Let us help you find you way in this very bustling city" << endl;
+			std::cout << "Hello " << username << "!. Let us help you find your way in this very bustling city" << endl;
             std::cout << "Please enter where you are and the place you are going to: " << endl;
 
 			char again = 0;
+			int startChoice = 0, endChoice = 0;
 			
 			do {
 				//This function is declared below but i am calling it now.
 				displayLocations();
-
-				int startChoice, endChoice;
+				
 				std::cout << "Enter number for start location: ";
-				std::cin >> startChoice;
+				while(!(std::cin >> startChoice) || !isValidChoice(startChoice)) {
+				std::cin.clear();
+				std::cin.ignore(10000, '\n');
+				std::cout << "Invalid input. Please enter a valid number for start location: ";
+				}
+				
 				std::cout << "Enter number for your destination: ";
-				std::cin >> endChoice;
+				while (!(std::cin >> endChoice) || !isValidChoice(endChoice)) {
+				std::cin.clear();
+				std::cin.ignore(10000, '\n');
+				std::cout << "Invalid input. Please enter a valid number for end location: ";
+				}
 
 				//This is when we want to get  the text from the number the user picked
 				string start = locations[startChoice - 1];
 				string end = locations[endChoice - 1];
 
-				std::cout << "Dear " << username << ". You are at " << start << " and you want to go to " << end << ". This is your result." << endl;
+				std::cout << "Dear " << username << ". You are at " << start << " and you want to go to " << end << "." << endl;
 
 				//This isValidChoice is also declared below.
 				if (!isValidChoice(startChoice) || !isValidChoice(endChoice)) {
